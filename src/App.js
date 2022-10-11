@@ -18,6 +18,14 @@ const App = () => {
           path: "*",
           element: <h1>Not Found</h1>,
         },
+        {
+          path: "/quiz/:id",
+          loader: ({ params }) =>
+            fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.id}`
+            ).then((res) => res.json()),
+          element: <h1>Quiz</h1>,
+        },
       ],
     },
   ]);
