@@ -61,13 +61,13 @@ const Header = () => {
             </ul>
           </div>
           <Link className="btn btn-ghost normal-case text-xl">
-            The Daily Quiz 
+            The Daily Quiz
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <Link>All Topics</Link>
+              <Link to="/">All Topics</Link>
             </li>
             <li tabIndex={0}>
               <Link>

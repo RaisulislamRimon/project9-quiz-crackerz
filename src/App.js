@@ -11,7 +11,12 @@ const App = () => {
       children: [
         {
           path: "/",
+          loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
           element: <Home />,
+        },
+        {
+          path: "*",
+          element: <h1>Not Found</h1>,
         },
       ],
     },
