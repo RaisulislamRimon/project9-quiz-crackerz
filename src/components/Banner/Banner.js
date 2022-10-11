@@ -4,7 +4,7 @@ import Toast from "../Toast/Toast";
 const Banner = () => {
   const [showToast, setShowToast] = useState(false);
   return (
-    <div className="container sm:mx-auto mt-8">
+    <div className="container sm:mx-auto mt-20">
       <div className="card mx-auto md:card-side bg-base-100 shadow-xl">
         <figure>
           <img
