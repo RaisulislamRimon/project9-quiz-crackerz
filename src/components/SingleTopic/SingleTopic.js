@@ -4,7 +4,7 @@ const SingleTopic = ({ singleQuiz }) => {
   const { logo, name, total } = singleQuiz;
   return (
     <div className="mt-16  mx-auto">
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100 shadow-xl hover:shadow-sky-300 ">
         <figure>
           <img src={logo} alt={name} />
         </figure>
