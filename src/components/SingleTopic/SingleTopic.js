@@ -1,8 +1,9 @@
 import React from "react";
 
-const SingleTopic = () => {
+const SingleTopic = ({ singleQuiz }) => {
+  console.log(singleQuiz);
   return (
-    <div>
+    <div className="mt-16  mx-auto">
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
           <img src="https://placeimg.com/400/225/arch" alt="Shoes" />

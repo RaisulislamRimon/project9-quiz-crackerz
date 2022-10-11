@@ -2,10 +2,14 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto">
-      <div className="card md:card-side bg-base-100 shadow-xl">
+    <div className="container sm:mx-auto">
+      <div className="card mx-auto md:card-side bg-base-100 shadow-xl">
         <figure>
-          <img className="md:w-40" src="https://placeimg.com/400/400/arch" alt="Album" />
+          <img
+            className="md:w-40"
+            src="https://placeimg.com/400/400/arch"
+            alt="Album"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">New Quiz is released every day!!!</h2>
