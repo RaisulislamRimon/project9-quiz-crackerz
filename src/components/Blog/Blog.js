@@ -16,13 +16,13 @@ const Blog = () => {
             the navigation among the views of various components in a React
             Application and allows changing the URL of the browser and keeps the
             UI in sync with the URL.React Router is a state container for the
-            current location , or URL. <br /> <br />
+            current location , or URL. <br />
             It keeps track of the location and renders different Routes as it
             changes, and it also gives you tools to update the location using
             Links and the history API.React Router is an API for React
             applications.React Router, and dynamic, client-side routing, allows
             us to build a single-page web application with navigation without
-            the page refreshing as the user navigates. <br /> <br />
+            the page refreshing as the user navigates. <br />
             By preventing a page refresh, and using Router or Link,the flash of
             a white screen or blank page is prevented. This is one increasingly
             common way of having a more seamless user experience. React router
@@ -40,7 +40,21 @@ const Blog = () => {
           How does Context API works ?
         </div>
         <div className="collapse-content">
-          <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+          <p>
+            The React Context API is a way for a React app to effectively
+            produce global variables that can be passed around. This is the
+            alternative to "prop drilling" or moving props from grandparent to
+            child to parent, and so on. <br />
+            Context provides a way to pass data through the component tree
+            without having to pass props down manually at every level.In a
+            typical React application, data is passed top-down (parent to child)
+            via props, but such usage can be cumbersome for certain types of
+            props (e.g. locale preference, UI theme) that are required by many
+            components within an application. Context provides a way to share
+            values like these between components without having to explicitly
+            pass a prop through every level of the tree.Using context, we can
+            avoid passing props through intermediate elements
+          </p>
         </div>
       </div>
       <div
