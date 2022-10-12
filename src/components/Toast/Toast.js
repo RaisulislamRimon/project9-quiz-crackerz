@@ -6,7 +6,6 @@ const Toast = () => {
       <div className="alert alert-success">
         <div>
           <span>You have subscribed successfully.</span>
-          {/* <span>Take a quiz and get a chance to get a job.</span> */}
         </div>
       </div>
     </div>
