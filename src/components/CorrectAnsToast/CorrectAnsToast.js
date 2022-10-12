@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CorrectAnsToast = () => {
+  const [showElement, setShowElement] = useState(true);
+  useEffect(() => {
+    setTimeout(function () {
+      setShowElement(false);
+    }, 3000);
+  }, []);
   return (
     <div className="toast toast-top toast-end">
-      <div className="alert alert-info">
-        <span>Your answer is correct. Try the next one.</span>
-      </div>
+      {showElement && (
+        <div className="alert alert-info">
+          <span>Your answer is correct. Try the next one.</span>
+        </div>
+      )}
     </div>
   );
 };

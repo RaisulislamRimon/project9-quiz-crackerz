@@ -6,7 +6,7 @@ const SingleQuiz = (props) => {
   const { id, question, options, correctAnswer } = props.ques;
   const [toggle, setToggle] = useState(false);
   const [correctAns, setCorrectAns] = useState("");
-  const [result, setResult] = useState(false);
+  const [result, setResult] = useState();
   // console.log(question, id);
   // console.log(props.ques.options);
   return (
@@ -99,8 +99,9 @@ const SingleQuiz = (props) => {
               );
             })}
           </div>
-
-          {result && correctAns === correctAnswer && <CorrectAnsToast />}
+          {result && correctAns === correctAnswer ? <CorrectAnsToast /> : <></>}
+          {/* {result && correctAns === correctAnswer && <CorrectAnsToast />} */}
+          {result || correctAns === correctAnswer ? <WrongAnsToast /> : <></>}
           <div
             onClick={() => {
               setResult(true);
