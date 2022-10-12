@@ -18,10 +18,6 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "*",
-          element: <h1>Not Found</h1>,
-        },
-        {
           path: "/quiz/:id",
           loader: ({ params }) => {
             return fetch(
@@ -29,6 +25,10 @@ const App = () => {
             );
           },
           element: <AllQuiz />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
         },
       ],
     },
