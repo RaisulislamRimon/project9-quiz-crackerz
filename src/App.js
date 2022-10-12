@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import AllQuiz from "./components/AllQuiz/AllQuiz";
 import Main from "./layouts/Main";
 import NotFound from "./components/NotFound/NotFound";
+import Blog from "./components/Blog/Blog";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const App = () => {
             );
           },
           element: <AllQuiz />,
+        },
+        {
+          path: "/blog",
+          element: <Blog />,
         },
         {
           path: "*",
