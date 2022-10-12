@@ -28,7 +28,7 @@ const Header = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link>All Topics</Link>
+                <Link to="/">All Topics</Link>
               </li>
               <li tabIndex={0}>
                 <Link className="justify-between">
@@ -45,10 +45,10 @@ const Header = () => {
                 </Link>
                 <ul className="p-2 bg-white">
                   <li>
-                    <Link>Result</Link>
+                    <Link to="/result">Result</Link>
                   </li>
                   <li>
-                    <Link>Job preparation</Link>
+                    <Link to="/job">Job preparation</Link>
                   </li>
                 </ul>
               </li>
@@ -60,7 +60,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">
+          <Link to='/' className="btn btn-ghost normal-case text-xl">
             The Daily Quiz
           </Link>
         </div>
@@ -84,10 +84,10 @@ const Header = () => {
               </Link>
               <ul className="p-2 bg-white">
                 <li>
-                  <Link>Result</Link>
+                  <Link to="/result">Result</Link>
                 </li>
                 <li>
-                  <Link>Job preparation</Link>
+                  <Link to="/job">Job preparation</Link>
                 </li>
               </ul>
             </li>
