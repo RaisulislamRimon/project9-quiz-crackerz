@@ -4,7 +4,7 @@ import SingleQuiz from "../SingleQuiz/SingleQuiz";
 
 const AllQuiz = () => {
   const quiz = useLoaderData();
-  const { id, logo, name } = quiz.data;
+  const { name } = quiz.data;
   const questions = quiz.data.questions;
   return (
     <div>

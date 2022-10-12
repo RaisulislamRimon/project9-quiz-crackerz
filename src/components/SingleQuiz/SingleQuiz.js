@@ -3,7 +3,7 @@ import CorrectAnsToast from "../CorrectAnsToast/CorrectAnsToast";
 import WrongAnsToast from "../WrongAnsToast/WrongAnsToast";
 
 const SingleQuiz = (props) => {
-  const { id, question, options, correctAnswer } = props.ques;
+  const { question, options, correctAnswer } = props.ques;
   const [toggle, setToggle] = useState(false);
   const [correctAns, setCorrectAns] = useState("");
   const [result, setResult] = useState();
