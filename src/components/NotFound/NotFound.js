@@ -1,9 +1,6 @@
 import { useRouteError } from "react-router-dom";
 
 const NotFound = () => {
-  const error = useRouteError();
-  console.error(error);
-
   return (
     <div id="error-page" className="flex justify-center">
       <div className="card w-96 bg-base-100 shadow-xl ">
