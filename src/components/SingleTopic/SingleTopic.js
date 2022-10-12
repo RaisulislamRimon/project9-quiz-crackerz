@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const SingleTopic = ({ singleQuiz }) => {
   const { id, logo, name, total } = singleQuiz;
   return (
-    <div className="mt-16  mx-auto">
+    <div className="mt-16 mb-16  mx-auto">
       <div className="card w-96 bg-base-100 shadow-xl hover:shadow-sky-300 ">
         <figure>
-          <img src={logo} alt={name} />
+          <img className="bg-gray-400" src={logo} alt={name} />
         </figure>
-        <div className="card-body">
+        <div className="card-body  bg-slate-200">
           <h2 className="card-title text-3xl">{name}</h2>
           <h2>Total questions : {total}</h2>
           <div className="card-actions justify-end">
