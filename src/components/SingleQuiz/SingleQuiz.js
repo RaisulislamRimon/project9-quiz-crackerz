@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SingleQuiz = (props) => {
-  const { id, question, options } = props.ques;
+  const { id, question, options, correctAnswer } = props.ques;
+  const [toggle, setToggle] = useState(false);
   // console.log(question, id);
   // console.log(props.ques.options);
   return (
@@ -19,7 +20,7 @@ const SingleQuiz = (props) => {
             </h2>
             <span className="absolute top-0  right-0 lg:right-10">
               <label className="swap">
-                <input type="checkbox" />
+                <input type="checkbox" onClick={() => setToggle(!toggle)} />
                 <div className="swap-on">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +60,13 @@ const SingleQuiz = (props) => {
                 </div>
               </label>
             </span>
+          </div>
+          <div>
+            {toggle && (
+              <h3 className="bg-green-600 text-violet-200 py-2 mx-20 my-2 rounded-md text-center">
+                <span className="font-bold">Correct answer</span> : {correctAnswer}{" "}
+              </h3>
+            )}
           </div>
           <div>
             {options.map((option, index) => {
