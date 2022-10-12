@@ -1,6 +1,6 @@
 # Project name : The Daily Quiz
 
-## Live Website Demo : The Daily Quiz
+## Live Website Demo : <a href="https://calm-sherbet-4ab516.netlify.app/" target="_blank">The Daily Quiz</a>
 
 ## Description :
 
