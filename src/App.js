@@ -3,12 +3,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
 import AllQuiz from "./components/AllQuiz/AllQuiz";
 import Main from "./layouts/Main";
+import NotFound from "./components/NotFound/NotFound";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Main />,
+      errorElement: <NotFound />,
       children: [
         {
           path: "/",
