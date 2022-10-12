@@ -11,8 +11,10 @@ const Quiz = () => {
   console.log(questions.length);
   return (
     <div>
-      <h1>Quiz Topic : {name}</h1>
-      <h2>Total Questions : {questions.length}</h2>
+      <h1 className="text-3xl font-bold text-center my-4">Quiz Topic : {name}</h1>
+      <h2 className="text-2xl font-bold text-center my-4">
+        Total Questions : {questions.length}
+      </h2>
       {questions.map((ques) => (
         <SingleQuiz key={ques.id} ques={ques}></SingleQuiz>
       ))}

@@ -11,7 +11,7 @@ const SingleTopic = ({ singleQuiz }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title text-3xl">{name}</h2>
-          <p>Total questions : {total}</p>
+          <h2>Total questions : {total}</h2>
           <div className="card-actions justify-end">
             <Link to={`/quiz/${id}`}>
               <button className="btn btn-primary">
