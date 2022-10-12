@@ -78,7 +78,7 @@ const SingleQuiz = (props) => {
               return (
                 <div
                   onClick={() => setCorrectAns(option)}
-                  className="form-control hover:bg-sky-200 rounded-lg p-2 mt-1
+                  className="form-control border border-cyan-200 hover:bg-sky-200 rounded-lg p-2 mt-1
                   mx-5"
                   key={index}
                 >
