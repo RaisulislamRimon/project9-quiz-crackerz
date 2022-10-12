@@ -65,7 +65,21 @@ const Blog = () => {
           What do you know about useRef hook ?
         </div>
         <div className="collapse-content">
-          <p>tabIndex={0} attribute is necessary to make the div focusable</p>
+          <p>
+            The useRef Hook allows you to persist values between renders. It can
+            be used to store a mutable value that does not cause a re-render
+            when updated. It can be used to access a DOM element directly.If we
+            tried to count how many times our application renders using the
+            useState Hook, we would be caught in an infinite loop since this
+            Hook itself causes a re-render. To avoid this, we can use the useRef
+            Hook. <br />
+            useRef() only returns one item. It returns an Object called current.
+            When we initialize useRef we set the initial value:
+            useRef(0).However, useRef() is useful for more than the ref
+            attribute. It's handy for keeping any mutable value around similar
+            to how you'd use instance fields in classes.useRef is like a “box”
+            that can hold a mutable value in its .current property.
+          </p>
         </div>
       </div>
     </div>
