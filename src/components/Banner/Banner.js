@@ -9,7 +9,7 @@ const Banner = () => {
         <figure>
           <img
             className="md:w-40"
-            src="https://placeimg.com/400/400/arch"
+            src="https://live.staticflickr.com/65535/52413593240_e00326e727_o.png"
             alt="Album"
           />
         </figure>
