@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import CorrectAnsToast from "../CorrectAnsToast/CorrectAnsToast";
+import WrongAnsToast from "../WrongAnsToast/WrongAnsToast";
 
 const SingleQuiz = (props) => {
   const { id, question, options, correctAnswer } = props.ques;
   const [toggle, setToggle] = useState(false);
+  const [correctAns, setCorrectAns] = useState("");
+  const [result, setResult] = useState(false);
   // console.log(question, id);
   // console.log(props.ques.options);
   return (
@@ -64,7 +68,8 @@ const SingleQuiz = (props) => {
           <div>
             {toggle && (
               <h3 className="bg-green-600 text-violet-200 py-2 mx-20 my-2 rounded-md text-center">
-                <span className="font-bold">Correct answer</span> : {correctAnswer}{" "}
+                <span className="font-bold">Correct answer</span> :{" "}
+                {correctAnswer}
               </h3>
             )}
           </div>
@@ -72,7 +77,9 @@ const SingleQuiz = (props) => {
             {options.map((option, index) => {
               return (
                 <div
-                  className="form-control hover:bg-sky-200 rounded-lg p-2 mt-1 mx-5"
+                  onClick={() => setCorrectAns(option)}
+                  className="form-control hover:bg-sky-200 rounded-lg p-2 mt-1
+                  mx-5"
                   key={index}
                 >
                   <label className="cursor-pointer label">
@@ -92,7 +99,14 @@ const SingleQuiz = (props) => {
               );
             })}
           </div>
-          <div className="card-actions justify-end">
+
+          {result && correctAns === correctAnswer && <CorrectAnsToast />}
+          <div
+            onClick={() => {
+              setResult(true);
+            }}
+            className="card-actions justify-end"
+          >
             <button className="btn btn-outline btn-primary">Submit</button>
           </div>
         </div>
