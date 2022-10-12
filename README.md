@@ -2,6 +2,8 @@
 
 ## Live Website Demo : <a href="https://calm-sherbet-4ab516.netlify.app/" target="_blank">The Daily Quiz</a>
 
+## https://calm-sherbet-4ab516.netlify.app/
+
 ## Description :
 
 - This is a quiz application that allows users to take a quiz on a daily basis.
