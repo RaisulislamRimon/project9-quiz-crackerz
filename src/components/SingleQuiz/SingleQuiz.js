@@ -1,13 +1,14 @@
 import React from "react";
 
 const SingleQuiz = (props) => {
-  const { id, question } = props.ques;
-  console.log(question, id);
+  const { id, question, options } = props.ques;
+  // console.log(question, id);
+  // console.log(props.ques.options);
   return (
     <div className="container mx-auto">
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-100 shadow-lg shadow-slate-400 border border-blue-300 my-10 ">
         <div className="card-body  ">
-          <div className="inline-flex relative">
+          <div className="lg:inline-flex  lg:relative">
             <h2 className="card-title ">
               Question :{" "}
               {
@@ -16,7 +17,7 @@ const SingleQuiz = (props) => {
                 // question.replace("&nbsp;"," ")
               }
             </h2>
-            <span className="absolute top-0 right-10">
+            <span className="absolute top-0  right-0 lg:right-10">
               <label className="swap">
                 <input type="checkbox" />
                 <div className="swap-on">
@@ -58,6 +59,30 @@ const SingleQuiz = (props) => {
                 </div>
               </label>
             </span>
+          </div>
+          <div>
+            {options.map((option, index) => {
+              return (
+                <div
+                  className="form-control hover:bg-sky-200 rounded-lg p-2 mt-1 mx-5"
+                  key={index}
+                >
+                  <label className="cursor-pointer label">
+                    <span className="label-text md:text-base">
+                      {/* {option.replace(/(<([^>]+)>)/gi, " ")} */}
+                      {option}
+                    </span>
+                    <input
+                      type="radio"
+                      name="option"
+                      value={option}
+                      className="radio radio-primary"
+                    />
+                    <span className="radio-mark"></span>
+                  </label>
+                </div>
+              );
+            })}
           </div>
           <div className="card-actions justify-end">
             <button className="btn btn-outline btn-primary">Submit</button>
