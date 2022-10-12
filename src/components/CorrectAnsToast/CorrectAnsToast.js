@@ -10,8 +10,8 @@ const CorrectAnsToast = () => {
   return (
     <div className="toast toast-top toast-end">
       {showElement && (
-        <div className="alert alert-info">
-          <span>Your answer is correct. Try the next one.</span>
+        <div className="alert alert-success">
+          <span>Your answer is correct.</span>
         </div>
       )}
     </div>

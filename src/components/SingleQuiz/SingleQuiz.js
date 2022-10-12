@@ -14,7 +14,7 @@ const SingleQuiz = (props) => {
       <div className="card w-full bg-base-100 shadow-lg shadow-slate-400 border border-blue-300 my-10 ">
         <div className="card-body  ">
           <div className="lg:inline-flex  lg:relative">
-            <h2 className="card-title ">
+            <h2 className="card-title md:mx-20">
               Question :{" "}
               {
                 question.replace(/(<([^>]+)>)/gi, " ")
@@ -101,7 +101,7 @@ const SingleQuiz = (props) => {
           </div>
           {result && correctAns === correctAnswer ? <CorrectAnsToast /> : <></>}
           {/* {result && correctAns === correctAnswer && <CorrectAnsToast />} */}
-          {result || correctAns === correctAnswer ? <WrongAnsToast /> : <></>}
+          {result && correctAns !== correctAnswer ? <WrongAnsToast /> : <></>}
           <div
             onClick={() => {
               setResult(true);
