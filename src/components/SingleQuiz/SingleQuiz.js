@@ -6,7 +6,15 @@ const SingleQuiz = (props) => {
   const { question, options, correctAnswer } = props.ques;
   const [toggle, setToggle] = useState(false);
   const [correctAns, setCorrectAns] = useState("");
-  const [result, setResult] = useState();
+  const result = (e) => {
+    if (e === correctAnswer) {
+      setCorrectAns("Correct Answer");
+      // setToggle(true);
+    } else {
+      setCorrectAns("Wrong Answer");
+      // setToggle(true);
+    }
+  };
   // console.log(question, id);
   // console.log(props.ques.options);
   return (
@@ -77,7 +85,8 @@ const SingleQuiz = (props) => {
             {options.map((option, index) => {
               return (
                 <div
-                  onClick={() => setCorrectAns(option)}
+                  // onClick={() => setCorrectAns(option)}
+                  onClick={() => result(option)}
                   className="form-control border border-cyan-200 hover:bg-sky-200 rounded-lg p-2 mt-1
                   mx-5"
                   key={index}
@@ -99,17 +108,8 @@ const SingleQuiz = (props) => {
               );
             })}
           </div>
-          {result && correctAns === correctAnswer ? <CorrectAnsToast /> : <></>}
-          {/* {result && correctAns === correctAnswer && <CorrectAnsToast />} */}
-          {result && correctAns !== correctAnswer ? <WrongAnsToast /> : <></>}
-          <div
-            onClick={() => {
-              setResult(true);
-            }}
-            className="card-actions justify-end"
-          >
-            <button className="btn btn-outline btn-primary">Submit</button>
-          </div>
+          {correctAns && <CorrectAnsToast />}
+          {correctAns === "Wrong Answer" && <WrongAnsToast />}
         </div>
       </div>
     </div>
