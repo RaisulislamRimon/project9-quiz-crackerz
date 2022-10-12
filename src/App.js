@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
-import Quiz from "./components/AllQuiz/AllQuiz";
+import AllQuiz from "./components/AllQuiz/AllQuiz";
 import Main from "./layouts/Main";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
               `https://openapi.programming-hero.com/api/quiz/${params.id}`
             );
           },
-          element: <Quiz />,
+          element: <AllQuiz />,
         },
       ],
     },
