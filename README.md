@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Project name : The Daily Quiz
+
+## Live Website Demo : The Daily Quiz
+
+## Description :
+
+- This is a quiz application that allows users to take a quiz on a daily basis.
+- The quiz is a multiple choice quiz with many questions.
+- The quiz is about general knowledge of Front end Web Development.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
